@@ -1,3 +1,7 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+/**/
 header {
     background-color: white;
     width: 100%;
@@ -5,6 +9,8 @@ header {
     font-size: 13px;
     height: 64px;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
 }
 
 
@@ -14,23 +20,28 @@ Shadow / Default
 box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
 } */
 
+/**/
 body {
     display: grid;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     min-height: 100vh;
     background-color: rgba(246, 247, 248, 1);
 }
 
+/**/
 .container {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-    justify-self: center;
-    align-items: center;
+    width: 1104px;
+    margin: 0 auto;
 }
 
+/**/
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**/
 .left-side {
     display: flex;
     flex-direction: row;
@@ -39,14 +50,21 @@ body {
     align-items: center;
 }
 
+/**/
 .tabs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     justify-self: center;
     column-gap: 24px;
+    list-style-type: none;
 }
 
+.tabs li::after{
+
+}
+
+/**/
 .right-side {
     display: flex;
     flex-direction: row;
@@ -55,6 +73,7 @@ body {
     align-items: center;
 }
 
+/**/
 .right-side a {
     display: flex;
     flex-direction: row;
@@ -62,37 +81,86 @@ body {
     column-gap: 8px;
 }
 
-li::marker {
+/**/
+.requirements {
+    display: flex;
+    width: 341px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/**/
+.requirements li{
+    list-style-type: none;
+    position: relative;
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/**/
+.requirements li::after{
     content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    left: -20px;
+    top: 11px;
+    background-color: #000;
+}
+
+.promo__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 128px;
+}
+
+.promo__wrapper-text {
 }
 
 footer {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    font-size: 13px;
-    height: 64px;
-    margin: 0 auto;
-    justify-content: space-between;
+    padding: 20px 0 24px 0;
+    border-top: 1px solid #e7e8ea;
 }
 
-.frame1 {
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--text-font);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--day-text-text-02, rgba(0, 0, 0, 0.54));
+
+    /* color: rgba(255, 252, 252, 0.021); */
+}
+
+
+
+.course_suitable__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 64px;
 }
 
-.title {
-    color: var(--day-text-text-01, rgba(0, 0, 0, 0.80));
-    text-align: center;
-    font-feature-settings: 'liga' off;
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 48px;
+
+.course_suitable__wrapper-image-and-text {
+    display: flex;
+    flex-direction: row;
+    /* width: 80%; */
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    gap: 64px;
 }
+
 
 .text-block {
     display: flex;
@@ -108,20 +176,28 @@ footer {
     gap: 24px;
 }
 
+
+.title {
+    color: var(--day-text-text-01, rgba(0, 0, 0, 0.80));
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 48px;
+}
+
 .subtitle {
     color: var(--day-text-text-01, rgba(0, 0, 0, 0.80));
     text-align: center;
     font-size: 15px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    /* 160% */
 }
 
-.button {
-    display: flex;
+button {
+    border-radius: 8px;
+    background: #FFDD2D;
     padding: 16px 36px;
-    align-items: center;
-    gap: 8px;
-    border-radius: 4px;
+    outline: none; /* Для синий ободки */
+    border: 0;
 }
