@@ -48,33 +48,32 @@ function calculateSalaryDifference(array) {
 // Словарь - (string, string), и все это не null и не undefined
 // * покройте класс тестами
 class Dictionary {
-    // constructor() {
-    //     this.words = new Map();
-    // }
-    // addItem(word, description) {
-    //     if (word != null && typeof(word) === "string" && typeof(word) !== "undefined" && description != null && typeof(description) === "string" && typeof(description) !== "undefined") {
-    //         this.words.set(word, description);
-    //         return true;
-    //     }
-    //     return false;
-    // }
-    // getItem(word) {
-    //     if (word != null && typeof(word) === "string" && typeof(word) !== "undefined") {
-    //         if (this.words.has(word)) return this.words.get(word);
-    //         return false;
-    //     }
-    //     return false;
-    // }
-    // deleteItem(word) {
-    //     if (word != null && typeof(word) === "string" && typeof(word) !== "undefined") {
-    //         if (this.words.has(word)) {
-    //             this.words.delete(word);
-    //             return true;
-    //         }
-    //         return false;
-    //     }
-    //     return false;
-    // }
+    constructor() {
+        this.dictionary = new Map();
+    }
+
+
+    addWord(word, description) {
+        if (word?.length && typeof (word) === "string" && description?.length && typeof (description) === "string") {
+            this.dictionary.set(word, description);
+            return true;
+        }
+        return false;
+    }
+    getWord(word) {
+        if (word?.length && typeof (word) === "string") {
+            return this.dictionary.get(word) ?? false;
+        }
+        return false;
+    }
+    deleteWord(word) {
+        if (word?.length && typeof (word) === "string") {
+            if(!this.dictionary.get(word)) return false;
+            this.dictionary.delete(word)
+            return true
+        }
+        return false;
+    }
 }
 
 module.exports = {

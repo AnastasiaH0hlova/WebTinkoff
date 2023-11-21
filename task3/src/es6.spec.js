@@ -44,25 +44,25 @@ describe('es6', () => {
 
         it('словарь возвращает значение', () => {
             const dic = new core.Dictionary();
-            dic.addItem("1", "one");
-            assert.strictEqual(dic.getItem("1"), "one");
-            assert.strictEqual(dic.getItem("2"), false);
+            dic.addWord("1", "one");
+            assert.strictEqual(dic.getWord("1"), "one");
+            assert.strictEqual(dic.getWord("2"), false);
         });
 
         it('словарь позволяет добавлять значения', () => {
             const dic = new core.Dictionary();
-            assert.strictEqual(dic.addItem("1", "one"), true);
-            assert.strictEqual(dic.addItem(123, "one"), false);
-            assert.strictEqual(dic.addItem("1", 1), false);
+            assert.strictEqual(dic.addWord("1", "one"), true);
+            assert.strictEqual(dic.addWord(123, "one"), false);
+            assert.strictEqual(dic.addWord("1", 1), false);
         });
 
         it('словарь позволяет удалять значения', () => {
             const dic = new core.Dictionary();
-            dic.addItem("1", "one")
-            dic.addItem("2", "two")
-            assert.strictEqual(dic.deleteItem("1"), true);
-            assert.strictEqual(dic.deleteItem("asd"), false);
-            assert.strictEqual(dic.deleteItem(2), false);
+            dic.addWord("1", "one")
+            dic.addWord("2", "two")
+            assert.strictEqual(dic.deleteWord("1"), true);
+            assert.strictEqual(dic.deleteWord("asd"), false);
+            assert.strictEqual(dic.deleteWord(2), false);
         });
 
     });
