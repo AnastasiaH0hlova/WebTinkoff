@@ -97,8 +97,8 @@ function getOperationFn(initialValue, operatorFn) {
  * console.log(generator()); // 9
  */
 function sequence(start, step) {
-    let storedValue = start ? ? 0;
-    storedValue -= step ? ? 1;
+    let storedValue = start ?? 0;
+    storedValue -= step ?? 1;
 
     return function() {
         return storedValue += step ? ? 1;
