@@ -7,10 +7,6 @@
 // строку формата Имя Фамилия
 function fioToName(fio) {
     const fio_mas = fio.split(' ');
-    console.log(fio_mas[0])
-    console.log(fio_mas[1])
-    console.log(fio_mas[2])
-    console.log(fio_mas)
     return fio_mas[1] + ' ' + fio_mas[0];
 }
 
