@@ -1,0 +1,31 @@
+.header-wrapper {
+    max-width: 1250px;
+    padding: 0 15px 0 15px;
+    height: 62px;
+    background-color: var(--sub-color);
+    box-shadow: 0px 2px 4px 0px var(--header-shadow);
+}
+
+.btn-wrapper {
+    border-radius: 8px;
+    height: 44px;
+    width: 244px;
+    color: var(--sub-color-02);
+    outline: none;
+    border: none;
+    background-color: var(--btn-color);
+
+    &:hover {
+        background-color: var(--btn-hover);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &:active {
+        background-color: var(--btn-active);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &:focus {
+        border: 2px solid var(--btn-color, --btn-border);
+    }
+}
