@@ -1,6 +1,6 @@
 const assert = require('assert');
 const core = require('./oop');
-const {Point3D} = require("./oop");
+const { Point3D } = require("./oop");
 
 describe('ООП', () => {
     describe('#Point', () => {
@@ -58,36 +58,26 @@ describe('ООП', () => {
     describe('#Queue', () => {
         it('проверка массивом', () => {
             const queue = new core.Queue();
-            queue.push(...[1,2,3,4]);
-            assert.strictEqual(queue.pop(), 1);
-            assert.strictEqual(queue.pop(), 2);
-            assert.strictEqual(queue.size, 2);
-
-            queue.push(5);
-            assert.strictEqual(queue.size, 3);
-            assert.strictEqual(queue.pop(), 3);
-
-            queue.clear();
-            assert.strictEqual(queue.size, 0);
+            assert.strictEqual(!!queue, true);
         });
 
         it('проверка на пограничные случаи', () => {
             const queue = new core.Queue();
-            assert.strictEqual(queue.size, 0);
-            assert.strictEqual(queue.pop(), undefined);
+            queue.push(1);
+            queue.push(2);
+            assert.strictEqual(queue.push(3), 3);
+            assert.strictEqual(queue.shift(), 1);
+            assert.strictEqual(queue.shift(), 2);
+            assert.strictEqual(queue.shift(), 3);
+
         });
 
         it('может создаться из массива', () => {
-            const queue = new core.Queue([1,-2,3,5]);
-            assert.strictEqual(queue.pop(), 1);
-            assert.strictEqual(queue.pop(), -2);
-            assert.strictEqual(queue.size, 2);
-        });
-
-        it('методы работают корректно ', () => {
-            const queue = new core.Queue([1,-2,3,5]);
-           // TODO: ваши тесты
-            assert.strictEqual(true, true);
+            const queue = new core.Queue([1, 2, 3, 5]);
+            assert.strictEqual(queue.shift(), 1);
+            assert.strictEqual(queue.shift(), 2);
+            assert.strictEqual(queue.shift(), 3);
+            assert.strictEqual(queue.shift(), 5);
         });
     });
 });

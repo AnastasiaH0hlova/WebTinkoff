@@ -39,9 +39,31 @@ describe('es6', () => {
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
-
-            // TODO
             assert.strictEqual(!!dic, true);
         });
+
+        it('словарь возвращает значение', () => {
+            const dic = new core.Dictionary();
+            dic.addWord("1", "one");
+            assert.strictEqual(dic.getWord("1"), "one");
+            assert.strictEqual(dic.getWord("2"), false);
+        });
+
+        it('словарь позволяет добавлять значения', () => {
+            const dic = new core.Dictionary();
+            assert.strictEqual(dic.addWord("1", "one"), true);
+            assert.strictEqual(dic.addWord(123, "one"), false);
+            assert.strictEqual(dic.addWord("1", 1), false);
+        });
+
+        it('словарь позволяет удалять значения', () => {
+            const dic = new core.Dictionary();
+            dic.addWord("1", "one")
+            dic.addWord("2", "two")
+            assert.strictEqual(dic.deleteWord("1"), true);
+            assert.strictEqual(dic.deleteWord("asd"), false);
+            assert.strictEqual(dic.deleteWord(2), false);
+        });
+
     });
 });
