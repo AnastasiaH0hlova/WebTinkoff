@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml"
+    href="https://acdn.tinkoff.ru/params/common_front/resourses/icons/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тинькофф Образование</title>
+</head>
+
+<body>
+  <header class="header-wrapper flex space-between align-center">
+    <span class="roboto font-13 dark-main">Анастасия Хохлова 6409</span>
+    <button id="handOutBtn" class="btn-wrapper pointer roboto height-24px font-15px">Раздать карты</button>
+  </header>
+  <main class="flex row">
+    <div class="form-wrap half-wrapper flex col gap-20px">
+      <span class="half-wrapper__title roboto dark-main font-20px">Форма создания/редактирования карточки</span>
+      <div class="flex col gap-10px">
+        <input class="input-form roboto font-15px" placeholder="Название" name="name"></input>
+        <textarea class="input-form roboto font-15px off-horizontal-resize" placeholder="Описание"
+          name="description"></textarea>
+        <input class="input-form roboto font-15px" placeholder="Ссылка на изображение" name="imgLink"></input>
+        <input class="input-form roboto font-15px" placeholder="Код товара" name="id"></input>
+        <input class="input-form roboto font-15px" placeholder="Поставщик" name="provider"></input>
+      </div>
+      <div class="flex align-center space-between form-footer">
+        <button class="form-footer__btn btn-wrapper pointer" id="cancelBtn" onclick="clearForm()">Отмена</button>
+        <button class="form-footer__btn btn-wrapper pointer" id="deleteBtn" onclick="deleteCard(event)">Удалить</button>
+        <button class="form-footer__btn btn-wrapper pointer" id="approveBtn" onclick="editCard(event)">Окей</button>
+      </div>
+    </div>
+    <div class="half-wrapper main-wrapper flex col gap-20px">
+      <span class="half-wrapper__title roboto dark-main font-20px">Список карточек</span>
+      <div class="cards-list flex align-start">
+        <!-- <div class="card flex align-start col">
+          <div class="row width-100 flex space-between">
+            <span class="roboto font-15px height-28px dark-main">id: 123</span>
+            <span class="roboto font-15px height-28px dark-main pointer card__edit">Изменить</span>
+          </div>
+          <div class="flex row card__img-text-wrap">
+            <img
+              src="https://img.freepik.com/free-photo/rainbow-oil-drops-on-a-water-surface-abstract-background_23-2148290071.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703548800&semt=ais"></img>
+            <div class="flex col">
+              <span class="roboto card__title height-28px dark-main">Заголовок</span>
+              <span class="roboto font-15px dark-main card__provider ">Поставщик</span>
+            </div>
+          </div>
+          <span class="roboto font-15px height-28px dark-main">Описание</span>
+        </div> -->
+      </div>
+    </div>
+  </main>
+  <script src="scripts/cards-list.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
