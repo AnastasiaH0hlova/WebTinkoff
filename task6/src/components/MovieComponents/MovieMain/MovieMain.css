@@ -1,0 +1,18 @@
+.movie-poster img {
+    width: 200px;
+    height: 297px;
+}
+
+.main-wrapper {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.nonselected {
+    user-select: none;
+}
+
+.like {
+    width: 24px;
+    height: 24px;
+}

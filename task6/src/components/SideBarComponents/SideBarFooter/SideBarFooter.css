@@ -1,0 +1,5 @@
+.sidebar-footer {
+    height: 67px;
+    width: calc(100% - 10px);
+    border-top: 1px solid var(--border);
+}
