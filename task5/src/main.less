@@ -1,0 +1,46 @@
+.main-wrapper {
+    width: calc(60% - 35px);
+    padding-left: 35px;
+}
+
+.card {
+    width: 228px;
+    height: 143px;
+    border-radius: 16px;
+    border: 1px solid var(--btn-color);
+    background: var(--sub-color-02);
+    padding: 5px 15px 5px 15px;
+    gap: 3px;
+    overflow: hidden;
+
+    &__img-text-wrap {
+        gap: 12px;
+    }
+
+    &__edit {
+        &:hover {
+            color: var(--btn-active);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__provider {
+        opacity: 0.8;
+    }
+
+    & img {
+        width: 80px;
+        height: 80px;
+        clip-path: circle(45%);
+    }
+}
+
+.cards-list {
+    gap: 8px;
+    flex-flow: row wrap;
+}

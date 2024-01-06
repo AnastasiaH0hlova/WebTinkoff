@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Глаз Одина",
+      "provider": "Этническая группа",
+      "src": "https://avatars.mds.yandex.net/i?id=9095f1046a41a475dcda4611875a8d33_l-5233563-images-thumbs&n=27&h=480&w=480",
+      "desc": "Оч красивые камни"
+    },
+    {
+      "id": 2,
+      "name": "Котяя",
+      "provider": "Яндекс",
+      "src": "https://i.ucrazy.ru/files/pics/2023.10/2023-10-17-21-53-072.webp",
+      "desc": "Какой он чудо"
+    },
+    {
+      "id": 3,
+      "name": "Чаппи и ко",
+      "provider": "Hi-News",
+      "src": "https://hi-news.ru/wp-content/uploads/2023/03/bing_gpt_19-750x588.jpg",
+      "desc": "Пишут"
+    },
+    {
+      "id": 4,
+      "name": "SnakePh",
+      "provider": "VoltMax",
+      "src": "https://volt.max-demo.ru/upload/iblock/936/936db5d4f91b46e3a601c8c64db6fbdf.jpg",
+      "desc": "В змейку?"
+    },
+    {
+      "id": 5,
+      "name": "Пппринтер",
+      "provider": "Canon",
+      "src": "https://silikonmold.ru/image/cache/catalog/2020/Iyli/1098.970-1200x1200.jpg",
+      "desc": "Что печатаем?"
+    },
+    {
+      "id": 6,
+      "name": "Лачуга",
+      "provider": "ООО Заповедник",
+      "src": "https://m.terem-pro.ru/upload/iblock/f50/f503b998a14db71227b0382f06b00c0a.jpg",
+      "desc": "Мистер Старк?"
+    }
+  ],
+  "creatorInfo": {
+    "name": "Анастасия Хохлова",
+    "group": "6409"
+  }
+}
