@@ -1,0 +1,8 @@
+.interaction-input {
+    width: 308px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--base-01);
+    outline: none;
+    border: none;
+}

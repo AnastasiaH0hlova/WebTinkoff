@@ -1,0 +1,9 @@
+:root {
+    --shadow: rgba(0, 0, 0, 0.25);
+    --border: rgba(217, 217, 217, 0.52);
+    --border-card: rgba(108, 108, 108, 0.81);
+
+    --base-01: #ECF1F7;
+    --base-02: #336FEE;
+    --base-03: #EBF4FF;
+}

@@ -1,0 +1,6 @@
+.interatcion-footer {
+    height: 67px;
+    margin-right: 10px;
+    border-top: 1px solid var(--border);
+    justify-content: flex-end;
+}

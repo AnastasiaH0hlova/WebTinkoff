@@ -1,0 +1,22 @@
+.search {
+    margin-bottom: 15px;
+}
+
+.search-input {
+    width: 308px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--base-01);
+    outline: none;
+    border: none;
+}
+
+.search-btn {
+    width: 68px;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: var(--base-01);
+    box-shadow: 0px 2px 2px var(--shadow);
+}
